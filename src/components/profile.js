@@ -48,42 +48,42 @@ const Profile = () => {
                 <div className="subReview">
                     <ReviewCard
                         img1 = "/img/man3.jpg"
-                        name = "Balamurugan"
+                        name = "G.M.Balamurugan"
                         img2 = "/img/1S.png"
                         
                     />
                      <ReviewCard
                         img1 = "/img/man1.jpg"
-                        name = "Balamurugan"
+                        name = "vinoth kuram"
                         img2 = "/img/2S.png"
                         
                     /> 
                     
                     <ReviewCard
                         img1 = "/img/man2.jpg"
-                        name = "Balamurugan"
+                        name = "Kumarasubramai"
                         img2 = "/img/3S.png"
                         
                     /> <ReviewCard
                         img1 = "/img/man3.jpg"
-                        name = "Balamurugan"
+                        name = "G.M.Nagarajan"
                         img2 = "/img/4S.png"
                         
                     /> <ReviewCard
                         img1 = "/img/GM.png"
-                        name = "Balamurugan"
+                        name = "N.A.Balaji"
                         img2 = "/img/5S.png"
                         
                     />
                      <ReviewCard
                         img1 = "/img/man1.jpg"
-                        name = "Balamurugan"
+                        name = "Veeranamani"
                         img2 = "/img/2S.png"
                         
                     /> 
                      <ReviewCard
                         img1 = "/img/man1.jpg"
-                        name = "Balamurugan"
+                        name = "Kumaran"
                         img2 = "/img/2S.png"
                         
                     /> 
