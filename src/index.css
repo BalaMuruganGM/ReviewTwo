@@ -1,13 +1,385 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
 }
+
+/* profile file */
+.profileContainer{
+    width:100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: 1%;
+}
+
+.Logo{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Logo h2{
+    text-align: center;
+}
+
+.Logo img{
+    height: 150px;
+    width: 200px;
+    background-color: red;
+}
+
+
+/* ReviewCard file style start */
+.profile{
+    /* width: 350px; */
+    height: 150px;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 15px 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items:center;
+}
+
+.leftProfile{
+    height:100%;
+}
+
+.leftProfile img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: red;
+}
+
+
+.rightProfile{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 240px;
+}
+
+.TopRight{
+    display: grid;
+    gap: 5px;
+}
+
+.TopRight img{
+    width: 100px;
+    height: 30px;
+}
+
+/* Review Card file Style clouses */
+
+.reviewContainer{
+    width: 100%;
+    height: 180px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    padding-left: 15px;
+}
+
+.subReview{
+    height: 100%;
+    min-width:auto;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+
+.arrowBox{
+    width:100%;
+    padding: 0px 10px;
+    display: flex;
+    justify-content:end;
+    font-size: 25px;
+    font-weight: bold;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.arrow{
+    cursor: pointer;
+    height: 20px;
+    width: 40px;
+    background-color: red;
+    border-radius:3px;
+    color: white;
+}
+
+.bottomRight p{
+    font-size: 14px;
+    font-weight: 400;
+
+}
+
+
+.reviewButton{
+    padding-top: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.reviewButton button{
+    width: 120px;
+    height: 30px;
+    background-color: #007bff;
+    color:white;
+    border: unset;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight:600;
+}
+
+
+@media screen and (max-width:1000px) {
+    .arrowBox{
+        margin-top: 50px;
+    }
+}
+
+@media screen and (max-width:600px){
+    .arrowBox{
+        display: none;
+    }
+
+    .reviewContainer{
+        margin-top: 20px;
+        padding: 0px;
+    }
+
+    .profileContainer{
+        padding: 0px 5px;
+    }
+
+    .Logo img{
+        width: 200px;
+        height: 100px;
+    }
+
+    .Logo h2{
+        font-size: 18px;
+    }
+
+
+    .profile{
+        padding: 5px;
+        height: 120px;
+    }
+
+
+.leftProfile img{
+    width: 40px;
+    height: 40px;
+}
+
+
+.rightProfile{
+    height: 100%;
+    width: 215px;
+}
+
+.TopRight h3{
+    font-size: 14px;
+}
+
+.bottomRight p{
+    font-size: 13px;
+}
+
+
+
+}
+
+@media screen and (max-width:400px) {
+    .Logo h2{
+        font-size: 15px;
+    }
+
+}
+
+
+/* Form  file Style Start */
+
+form {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 45%;
+    padding: 30px 20px 20px 20px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    background: #fafafa;
+}
+
+form h2 {
+    text-align: center;
+}
+
+form .defalutClass {
+    /* padding: 10px;
+    border: unset;
+    outline:none;
+    border: 1px solid black;
+    border-radius: 5px; */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.defalutClass label {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.defalutClass textarea {
+    height: 120px;
+    margin-top: 8px;
+}
+
+.defalutClass input {
+    padding: 10px 15px;
+    border: unset;
+    border-radius: 5px;
+    border: 1px solid black;
+    outline: none;
+    margin: 5px 0px 3px 0px;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+form button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+
+.afterSubmit {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    padding-top: 60px;
+}
+
+.afterSubmitContent {
+    background: #007bff;
+    /* height: 120px; */
+    width: 80%;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+}
+
+    .defalutClass p{
+        color: red;
+        font-weight: bold;
+        font-size: 15px;
+    }
+
+
+
+
+
+
+@media screen and (max-width:1000px) {
+    form {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width:600px) {
+    form {
+        width: 80%;
+    }
+
+    .afterSubmitContent{
+        width: 100%;
+        font-size: 15px;
+        gap: 10px;
+    }
+
+    .afterSubmit{
+        padding-top: 30px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    form{
+        width: 85%;
+        min-height:20vh;
+        gap: 10px;
+        padding: 25px 10px;
+    }
+
+    .defalutClass p{
+        color: red;
+        font-weight: bold;
+        font-size: 10px;
+    }
+
+    .form h2{
+        font-size: 15px;
+    }
+
+    .defalutClass label{
+        font-size: 15px;
+    }
+
+    .defalutClass textarea{
+        height: 85px;
+    }
+
+.defalutClass input {
+    padding:8px 10px;
+    margin: 8px 0px 2px 0px;
+}
+
+    .afterSubmitContent{
+        font-size: 10px;
+        width: 100%;
+        gap: 5px;
+
+    }
+
+    .afterSubmit{
+        padding-top: 0px;
+    }
+
+}
+
+
+
